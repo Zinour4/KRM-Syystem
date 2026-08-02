@@ -2,3 +2,4 @@ pyrogram
 tgcrypto
 requests
 discord.py
+flask
