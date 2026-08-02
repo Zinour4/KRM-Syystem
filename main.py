@@ -6,15 +6,9 @@ import os
 import random
 from datetime import datetime
 
-try:
-    import discord
-    from discord import app_commands
-    from discord.ext import commands
-except ImportError:
-    print("❌ مكتبة discord.py غير مثبتة!")
-    print("👉 افتح CMD واكتب: pip install discord.py")
-    input("\nاضغط Enter للخروج...")
-    sys.exit()
+import discord
+from discord import app_commands
+from discord.ext import commands
 
 # ============ 🔑 التوكن ============
 BOT_TOKEN = "MTUzMzIwMjc2NTQ2NjE3NzU4Ng.GLWEPa.jwUhdVbKyRwJCaoq1G27vGVH3yHX6Yr60e1VQk"
