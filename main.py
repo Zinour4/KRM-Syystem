@@ -19,7 +19,8 @@ def keep_alive():
   t.start()
 
 
-keep_alive()import syskeep_alive()
+import sys
+keep_alive()
 import sys
 import asyncio
 import traceback
