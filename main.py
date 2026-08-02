@@ -864,12 +864,14 @@ async def on_ready():
 if __name__ == "__main__":
     import os
     
+    # جلب التوكن بأمان من متغيرات البيئة
     BOT_TOKEN = os.getenv("BOT_TOKEN")
     
     try:
-        if not BOT_TOKEN:
-            print("⚠️ التوكن غير موجود في متغيرات البيئة!")
+        if not BOT_TOKEN or BOT_TOKEN.strip() == "" or BOT_TOKEN == "PUT_YOUR_TOKEN_HERE":
+            print("⚠️ التوكن غير موجود في متغيرات البيئة (Environment Variables)!")
         else:
             bot.run(BOT_TOKEN)
     except Exception as e:
+        traceback.print_exc()
         traceback.print_exc()
