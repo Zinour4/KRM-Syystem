@@ -847,5 +847,5 @@ if __name__ == "__main__":
             bot.run(BOT_TOKEN)
     except Exception as e:
         traceback.print_exc()
-        input("\nEnter...")
-
+    import os
+BOT_TOKEN = os.getenv("BOT_TOKEN")
