@@ -860,15 +860,16 @@ async def on_ready():
     print("=" * 50)
 
 
-# ============ تشغيل ============
+# ============ التشغيل ============
 if __name__ == "__main__":
+    import os
+    
+    BOT_TOKEN = os.getenv("BOT_TOKEN")
+    
     try:
-        if BOT_TOKEN == "PUT_YOUR_TOKEN_HERE" or BOT_TOKEN.strip() == "":
-            print("\n⚠️ ضع التوكن!")
-            input("Enter...")
+        if not BOT_TOKEN:
+            print("⚠️ التوكن غير موجود في متغيرات البيئة!")
         else:
             bot.run(BOT_TOKEN)
     except Exception as e:
         traceback.print_exc()
-    import os
-BOT_TOKEN = os.getenv("BOT_TOKEN")
